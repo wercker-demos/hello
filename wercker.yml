@@ -9,11 +9,7 @@ build:
         name: Nose tests
         code: bin/tests
 
-    # - create-file:
-    #     name: Create a message file.
-    #     filename: hello/message.cfg
-    #     overwrite: true
-    #     content: Hi! This message will be written to the message config file!
+    #demo
 
     - script:
         # Pass tested soruce on to the image push.
