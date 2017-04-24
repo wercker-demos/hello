@@ -2,14 +2,19 @@
 build:
     box: python:2.7
     steps:
+
+    - create-file:
+        name: Create a message file.
+        filename: hello/message.cfg
+        overwrite: true
+        content: Hi! This message will be written to the message config file!
+
     # Check that our application's tests are passing. Since this is a python
     # application, our entry script will also install the application's dependencies
     # with Virtualenv
     - script:
         name: Nose tests
         code: bin/tests
-
-    #demo
 
     - script:
         # Pass tested soruce on to the image push.
