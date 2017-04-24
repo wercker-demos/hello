@@ -11,8 +11,10 @@ def test_functional_say_hello():
     # Make a get request to our app
     resp = app.get('/')
 
+    test_message = open("../hello/message.cfg", "r").read()
+
     # test that the body of the response contains our default message
-    resp.mustcontain("TEST MESSAGE")
+    resp.mustcontain(test_message)
 
     # Test that we got a successful HTTP response code
     assert resp.status == "200 OK"

@@ -10,10 +10,10 @@ def hello():
 
     # This will be true if launched as a test
     if "args" not in globals():
-        message = "TEST MESSAGE"
+        message_f = open("../hello/message.cfg", "r")
     else:
         message_f = open(args.messagefile, "r")
-        message = message_f.read()
+    message = message_f.read()
 
     return message
 
