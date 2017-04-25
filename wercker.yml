@@ -3,6 +3,12 @@ build:
     box: python:2.7
     steps:
 
+    - create-file:
+        name: Create a message file.
+        filename: hello/message.cfg
+        overwrite: true
+        content: Hi!
+
     # Check that our application's tests are passing. Since this is a python
     # application, our entry script will also install the application's dependencies
     # with Virtualenv
@@ -11,7 +17,7 @@ build:
         code: bin/tests
 
     - script:
-        # Pass tested soruce on to the image push.
+        # Pass tested source on to the image push.
         name: Tar and pass to output dir
         code: tar -czvf output.tar.gz * && mv output.tar.gz $WERCKER_OUTPUT_DIR
 ## End Pipeline ##
