@@ -2,4 +2,4 @@ env/
 hello/message.cfg
 .wercker
 *.pyc
-
+DEMO_NOTES
