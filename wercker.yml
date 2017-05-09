@@ -1,14 +1,9 @@
-# tst
 # This Pipeline is run whenever a new git commit is pushed.
 build:
     box: python:2.7
     steps:
 
-    - create-file:
-        name: Create a message file.
-        filename: hello/message.cfg
-        overwrite: true
-        content: Hi Oracle!
+    #
 
     # Check that our application's tests are passing. Since this is a python
     # application, our entry script will also install the application's dependencies
