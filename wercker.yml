@@ -23,6 +23,14 @@ build:
 ## End Pipeline ##
 
 
+workflow-test:
+    box: python:2.7
+    steps:
+
+    - script:
+        name: Say hi
+        code: echo "hi!"
+
 # This pipeline will be chained to start at the end of a build pipeline in the
 # Wercker Web Workflows editor.
 push-dockerhub:
